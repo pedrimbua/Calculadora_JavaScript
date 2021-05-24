@@ -1,32 +1,54 @@
-<HTML>  
-    <HEAD>
-        
-    </HEAD>
-    <BODY>
-        <H1>Calculadora </H1>
+<HTML>
+
+<HEAD>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="calc.css">
+
+</HEAD>
+
+<BODY>
+    <div class="container">
+        <div class="row">
+            <H1>Calculadora </H1>
+        </div>
         <FORM name="calc">
-            <input type="text" name="visor" /> <BR />
-            <INPUT type="button" value= 7 onclick="botao( value );"/>
-            <INPUT type="button" value= 8 onclick="botao( value );"/>
-            <INPUT type="button" value= 9 onclick="botao( value );"/>
-            <INPUT type="button" value= / onclick="operar('/');"/>
-            <BR />
-            <INPUT type="button" value= 4 onclick="botao( value );"/>
-            <INPUT type="button" value= 5 onclick="botao( value );"/>
-            <INPUT type="button" value= 6 onclick="botao( value );"/>
-            <INPUT type="button" value= * onclick="operar( '*' );"/>
-            <BR />
-            <INPUT type="button" value= 1 onclick="botao( value );"/>
-            <INPUT type="button" value= 2 onclick="botao( value );"/>
-            <INPUT type="button" value= 3 onclick="botao( value );"/>
-            <INPUT type="button" value= - onclick="operar( '-' );"/>
-            <BR />
-            <INPUT type="button" value= 0 onclick="botao( value );"/>
-            <INPUT type="button" value= "=" onclick="resultado();"/>
-            <INPUT type="button" value= C onclick="reset();"/>
-            <INPUT type="button" value= + onclick="operar('+');"/>
-            <BR />
+            <div class="row">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Calcule" name="visor" id='name' required />
+                    <label for="name" class="form__label">Calcule</label>
+                </div>
+            </div>
+            <div class="row">
+                <INPUT type="button" class="btn btn-primary" value="7" onclick="botao( value );" />
+                <INPUT type="button" class="btn btn-primary" value="8" onclick="botao( value );" />
+                <INPUT type="button" class="btn btn-primary" value="9" onclick="botao( value );" />
+                <INPUT type="button" class="btn btn-secondary" value="/" onclick="operar('/');" />
+            </div>
+            <div class="row">
+                <INPUT type="button" class="btn btn-primary" value="4" onclick="botao( value );" />
+                <INPUT type="button" class="btn btn-primary" value="5" onclick="botao( value );" />
+                <INPUT type="button" class="btn btn-primary" value="6" onclick="botao( value );" />
+                <INPUT type="button" class="btn btn-secondary" value="*" onclick="operar( '*' );" />
+            </div>
+            <div class="row">
+                <INPUT type="button" class="btn btn-primary" value="1" onclick="botao( value );" />
+                <INPUT type="button" class="btn btn-primary" value="2" onclick="botao( value );" />
+                <INPUT type="button" class="btn btn-primary" value="3" onclick="botao( value );" />
+                <INPUT type="button" class="btn btn-secondary" value="-" onclick="operar( '-' );" />
+            </div>
+            <div class="row">
+                <INPUT type="button" class="btn btn-primary" value="0" onclick="botao( value );" />
+                <INPUT type="button" class="btn btn-secondary" value="=" onclick="resultado();" />
+                <INPUT type="button" class="btn btn-primary" value="c" onclick="reset();" />
+                <INPUT type="button" class="btn btn-secondary" value="+" onclick="operar('+');" />
+            </div>
         </FORM>
-    </BODY>
-    <SCRIPT type="text/javascript" src="calc.js"></SCRIPT>
+    </div>
+</BODY>
+<SCRIPT type="text/javascript" src="calc.js"></SCRIPT>
+
 </HTML>
